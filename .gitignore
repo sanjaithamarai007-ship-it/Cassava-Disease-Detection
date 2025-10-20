@@ -1,1 +1,10 @@
 Notebooks/dataset/*.jpg
+
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.idea/
+.vscode/
+.env
+logs/
