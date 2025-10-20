@@ -8,7 +8,7 @@ import os
 
 
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder="static", static_url_path='/static',template_folder='templates')
 model = load_model('cropnet_1.h5', custom_objects={'KerasLayer': hub.KerasLayer})
 disease_names = ['Unknown Disease', 'Cassava Brown Streak Disease', 'Unknown Disease', 'Cassava Mosaic Disease', 'Healthy']
 uploaded_folder="static/images/uploaded"

@@ -13,12 +13,17 @@
  
     <div class="prediction">
         <h1>Predicted Results</h1>
+        <div class="image-preview">
+            <h2>Uploaded Image:</h2>
+            <img src="{{ url_for('static', filename='images/uploaded/' + request.files['file'].filename) }}" alt="Uploaded Image" style="max-width: 100%; max-height: 300px;">
+        </div>
         <div class="predicted-class">
          <h2>Prediction Probability: {{prediction_probability}} %</h2>
          <h2>Prediction: {{prediction}}</h2>
         </div>
         <h2 class="retry"><a href="{{home_page}}">Try Again</a></h2>
     </div>
+
 
     <footer>
         <div>
